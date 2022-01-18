@@ -12,6 +12,7 @@ public class Programa {
 
 	public static void main(String[] args) {
 
+		// Para fazer a leitura dos dados
 		Scanner leitor = new Scanner(System.in);
 
 		// Clientes
@@ -20,9 +21,11 @@ public class Programa {
 		// Contas
 		Conta conta = new Conta();
 
+		// Informa um número inteiro para contagem
 		System.out.print("Quantidade de Contas: ");
 		int quantidade = leitor.nextInt();
 
+		// Faz a contagem de acordo com o solicitado em quantidade
 		for (int i = 0; i < quantidade; i++) {
 
 			// Cliente
@@ -40,28 +43,34 @@ public class Programa {
 			System.out.print("Conta: ");
 			int numero = leitor.nextInt();
 
+			// Cria Cliente
 			cliente = new Cliente(nome, email);
 
+			// Escolher uma opção entre Contas Corrente e Poupança
 			System.out.println();
 			System.out.println("Escolha uma Opção: ");
-			System.out.print("[1]-Corrente ou [2]-Poupança: ");
+			System.out.print("[1]-Conta Corrente ou [2]-Conta Poupança: ");
 			int escolha = leitor.nextInt();
 
 			System.out.println();
 
+			// Dizer uma quantidade de Movimentos a realizar (Saque, Depósito ou Transferência)
 			System.out.print("Quantos movimentos deseja fazer: ");
 			int movimento = leitor.nextInt();
 			System.out.println();
 
+			// Contador de quantidades de Movimentos
 			for (int j = 0; j < movimento; j++) {
 
+				// Escolher entre Saque, Depósito e Transferência
 				System.out.println("Escolha uma Opção: ");
 				System.out.print("[1]-Saque ou [2]-Depósito ou [3]-Transferência: ");
 				int opcao = leitor.nextInt();
 
+				// Faz o teste de acordo com o digitado
 				switch (escolha) {
-				case 1: {
-					if (opcao == 1) {
+				case 1: { // Conta Corrente
+					if (opcao == 1) { // Se saque faz
 						try {
 							System.out.print("Valor do Saque: ");
 							double valor = leitor.nextDouble();
@@ -73,11 +82,11 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
 
-					} else if (opcao == 2) {
+					} else if (opcao == 2) { // Se depósito faz
 						try {
 							System.out.print("Valor do Depósito: ");
 							double valor = leitor.nextDouble();
@@ -89,10 +98,10 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
-					} else if (opcao == 3) {
+					} else if (opcao == 3) { // Se Transferência faz
 						try {
 							System.out.print("Valor do Transferência: ");
 							double valor = leitor.nextDouble();
@@ -104,7 +113,7 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
 					} else {
@@ -112,8 +121,8 @@ public class Programa {
 					}
 					break;
 				}
-				case 2: {
-					if (opcao == 1) {
+				case 2: { // Conta Poupança
+					if (opcao == 1) { // Se Saque faz
 						try {
 							System.out.print("Valor do Saque: ");
 							double valor = leitor.nextDouble();
@@ -125,11 +134,11 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
 
-					} else if (opcao == 2) {
+					} else if (opcao == 2) { // Se Depósito faz
 						try {
 							System.out.print("Valor do Depósito: ");
 							double valor = leitor.nextDouble();
@@ -141,10 +150,10 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
-					} else if (opcao == 3) {
+					} else if (opcao == 3) { // Se Transferência faz
 						try {
 							System.out.print("Valor do Transferência: ");
 							double valor = leitor.nextDouble();
@@ -156,7 +165,7 @@ public class Programa {
 							cliente.adicionarConta(conta);
 							System.out.println();
 							break;
-						} catch (InputMismatchException e) {
+						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
 					} else {
@@ -164,12 +173,12 @@ public class Programa {
 					}
 					break;
 				}
-				default:
-					throw new IllegalArgumentException("Unexpected value: " + escolha);
+				default: // Caso não satisfaça as opções acima
+					System.out.println("Informe [1]-Conta Corrente ou [2]-Conta Poupança.");
 				}
 			}
 			System.out.println();
 		}		
-		leitor.close();
+		leitor.close(); // Finaliza o Scanner
 	}
 }
