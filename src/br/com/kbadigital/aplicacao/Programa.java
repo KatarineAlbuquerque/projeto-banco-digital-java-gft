@@ -116,7 +116,7 @@ public class Programa {
 						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
-					} else {
+					} else { // Caso não seja as opções informadas
 						System.out.println("Informe [1]-Saque ou [2]-Depósito ou [3]-Transferência.");						
 					}
 					break;
@@ -168,7 +168,7 @@ public class Programa {
 						} catch (InputMismatchException e) { // Erro ao digitar ponto no lugar de vírgula
 							System.out.println("Digite o valor com vírgula! Ex: 100,00.");
 						}
-					} else {
+					} else { // Caso não seja as opções informadas
 						System.out.println("Informe [1]-Saque ou [2]-Depósito ou [3]-Transferência.");
 					}
 					break;
