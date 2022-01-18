@@ -7,7 +7,7 @@
 
 #### Primeiramente criei um modelo da UML para demonstrar como fica a organização de classes no programa.
 
-![UML Banco Digital](https://github.com/KatarineAlbuquerque/projeto_banco_digital_java_gft/blob/main/images/Banco_digital.png)
+![UML Banco Digital](https://github.com/KatarineAlbuquerque/projeto_banco_digital_java_gft/blob/main/images/Banco_digital_dio.png)
 
 #### O desenvolvimento do código foi realizado no Eclipse.
 
@@ -15,7 +15,7 @@ https://www.eclipse.org/downloads/
 
 #### A organização das classes é por pacotes de acordo com suas finalidades.
 
-#### A organização ficou da seginte forma:
+#### A organização ficou da seguinte forma:
 
 1. Pacote 1 - aplicação
 2. Pacote 2 - entidades
