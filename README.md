@@ -5,7 +5,7 @@
 
 #### Projeto desenvolvido através da abstração de objetos do mundo real de um banco. 
 
-#### Primeiramente ciei um modelo da UML para demonstrar como fica a organização de classes no programa.
+#### Primeiramente criei um modelo da UML para demonstrar como fica a organização de classes no programa.
 
 ![UML Banco Digital](https://github.com/KatarineAlbuquerque/projeto_banco_digital_java_gft/blob/main/images/Banco_digital_dio.png)
 
