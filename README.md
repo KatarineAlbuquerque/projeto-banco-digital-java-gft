@@ -7,7 +7,7 @@
 
 #### Primeiramente criei um modelo da UML para demonstrar como fica a organização de classes no programa.
 
-![UML Banco Digital](https://github.com/KatarineAlbuquerque/projeto_banco_digital_java_gft/blob/main/images/Banco_digital.png)
+![UML Banco Digital](https://github.com/KatarineAlbuquerque/projeto_banco_digital_java_gft/blob/main/images/Banco_digital_gft.png)
 
 #### O desenvolvimento do código foi realizado no Eclipse.
 
